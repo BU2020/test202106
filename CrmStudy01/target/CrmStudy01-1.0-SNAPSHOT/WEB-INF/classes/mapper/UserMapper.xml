@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhengzhou.crm.setting.dao.UserDao">
+    <select id="getById" parameterType="java.lang.String" resultType="com.hncz.domain.Student">
+        select * from mystudent where id=#{id}
+    </select>
+    <insert id="save">
+        insert into mystudent (id,name,age) values (#{id},#{name},#{age})
+    </insert>
+    <select id="getAll" resultType="com.hncz.domain.Student">
+        select * from mystudent
+    </select>
+</mapper>
